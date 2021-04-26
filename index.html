@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        .shadow-3d{
+            box-shadow: 0.5rem 0.5rem rgb(142, 200, 248);
+        }
+        .material-icons{
+            color:rgb(56, 53, 53);
+            font-size: 37px;
+            padding-top: 10px;
+            
+        }
+    </style>
+</head>
+<body onload="callapi()">
+    <nav class="navbar-light text-center" style="background-color: rgb(56, 163, 250); padding:20px;">
+        
+        <i class="material-icons">price_change</i>
+        <span style="font-family: Libre Baskerville;font-size: 40px;padding-bottom: 10px;">&nbsp; Currency Exchange</span>
+    </nav>
+
+    <div class="container" style="padding-top:10%;">
+        <div class="row">
+            <div class="col-md-12" style="width: 100%;margin-left:auto;margin-right: auto;">
+                <div class="card shadow-3d rounded-sm">
+                    <div class="row">
+                    <div class="col-6" style="padding:20px 20px 20px 30px;">
+                       <h5 style="color:rgb(20, 134, 241)">Convert Currency From</h5> 
+                       <label for="fromcurrency">Select Currency</label>
+                       <select id="currency" class="form-control">
+                       <option selected disabled>Please select</option>
+                    </select>
+                    <br> 
+                    <label for="amount">Enter Amount</label>
+                    <input type="number" class="form-control" style="width:50%;" id="amount">
+                    <br>
+                    <button type="button" class="btn btn-primary" onclick="convertrate()">Convert</button>
+                    </div>
+                    <div class="col-6" style="padding:20px 30px 20px 20px; border-left: 1px solid rgb(20, 134, 241)">
+                        <h5 style="color:rgb(20, 134, 241)">Convert Currency To</h5>
+                        <label for="fromcurrency">Select Currency</label>
+                        <select id="currency1" class="form-control">
+                            <option selected disabled>Please select</option>
+                        </select>
+                        <br>
+                        <label for="result">Equivalent Amount</label>
+                        <p id="results" style="color:rgb(20, 134, 241); font-size: 30px;"> </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Currency.js"></script>
+</body>
+</html>
