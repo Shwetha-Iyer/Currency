@@ -1,3 +1,3 @@
 # Currency
 
-This repository uses ExchangeRate API to do simple currency conversion.
+This repository uses ExchangeRate API to do currency conversion.
